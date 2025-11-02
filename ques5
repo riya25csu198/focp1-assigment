@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main(){
+    int x,y;
+
+    printf("enter x value: ");
+    scanf("%d",&x);
+
+    printf("enter y value: ");
+    scanf("%d",&y);
+
+    if( x == 0 && y == 0){
+        printf("point at origin");
+    }  
+    
+    if("x == 0 && ( y>0 || y<0)"){
+        printf("point is on y axis");
+    }
+
+    if((x>0|| x<0) && y==0){
+        printf("point is at x axis");
+    }
+
+
+    if(x!=0 && y!=0){
+        printf("point lies on :");
+        if (x>0 && y>0){
+            printf("quadrant 1");
+        }
+        if (x<0 && y>0){
+            printf("quadrant 2");
+        }
+        if (x<0 && y<0){
+            printf("quadrant3");
+        }
+        if (x>0 && y<0){
+            printf("quadrant 4");
+        }
+    }
+
+    return 0;
+}
