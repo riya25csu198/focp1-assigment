@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+    int n;
+    printf("enter number of value in arrays: ");
+    scanf("%d\n",&n);
+
+    int arr[n];
+    printf("enter %d values:",n);
+    for(int i=0; i<n; i++){
+        scanf("%d\n",&arr[i]);
+    }
+
+    int minimum,maximum;
+    minimum=arr[0];
+    maximum=arr[0];
+    for(int i=0; i<n; i++){
+        if(arr[i]>maximum){
+            maximum=arr[i];
+        }
+        if(arr[i]<minimum){
+            minimum=arr[i];
+        }
+    }
+
+    printf("max value: %d\n", maximum);
+    printf("min value: %d", minimum);
+    return 0;
+}
