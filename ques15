@@ -1,0 +1,28 @@
+#include<stdio.h> 
+int main(){
+    int n; 
+    printf("enter number of values: ");
+    scanf("%d",&n);
+
+    int arr[n],arr1[n];
+    printf("enter %d values: \n",n);
+    for(int i=0; i<n; i++){
+        scanf("%d",&arr[i]);
+    }
+
+    printf("array before rotation: ");
+    for(int i=0; i<n; i++){
+        printf("%d ",arr[i]);
+    }
+
+    for(int i=1; i<n; i++){
+        arr1[i]=arr[i-1];
+    }
+    arr1[0]=arr[n-1];
+
+    printf("array after rotation: ");
+    for(int i=0; i<n; i++){
+        printf("%d ",arr1[i]);
+    }
+    return 0;
+}
