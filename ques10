@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    int stdnum,count=0;
+    printf("enter number of students: ");
+    scanf("%d",&stdnum);
+
+    int arr[stdnum];
+    for(int i=0; i<stdnum; i++){
+        printf("enter marks of student %d: ", i+1);
+        scanf("%d\n",&arr[i]);
+
+    }
+    for(int i=0; i<stdnum; i++){
+        if(arr[i]==99){
+            count++;}
+    }
+    printf("number of students who scored 99 marks: %d students\n",count);
+
+    for (int i = 0; i<stdnum; i++){
+        if(arr[i]==99){
+            printf("student %d scored 99 marks\n", i+1);
+        }
+    }
+    
+    return 0;
+}
