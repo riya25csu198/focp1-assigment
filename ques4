@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main(){
+    int a,b,temp; 
+    printf("enter frist number: \n");
+    scanf("%d",&a);
+
+    printf("enter second number: \n");
+    scanf("%d",&b);
+
+    printf("original number: \nA=%d\tB=%d\n",a, b);
+    printf("after Swapping\n");
+
+    temp=a; 
+    a=b; 
+    b=temp;
+    printf("using Temp Variable: A=%d  B=%d \n",a, b);
+    
+    int* aPtr=&b;
+    int* bPtr=&a;
+    printf("using Pointer Manipulation: A=%d  B=%d \n", *bPtr, *aPtr);
+    
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("using Arithmetic Operator: A=%d  B=%d \n",b,a);
+
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    printf("using Bitwise Xor: A=%d  B=%d \n",a,b);
+
+    return 0;
+}
